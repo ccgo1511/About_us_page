@@ -132,3 +132,29 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkFade);
     checkFade(); // التحقق مرة واحدة عند التحميل
 });
+
+// إضافة تأثيرات لمعرض الصور
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+galleryItems.forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+});
+
+// إضافة تأثيرات للشركاء
+const partnerCards = document.querySelectorAll('.partner-card');
+
+partnerCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
